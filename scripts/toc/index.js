@@ -3,7 +3,7 @@ import path from 'path'
 
 const pathDist = './dist'
 
-const sortNumber = (a, b) => b.split('#')[0] - a.split('#')[0]
+const sortNumber = (a, b) => b.split('_')[0] - a.split('_')[0]
 
 export default (cb) => {
 	const files = fs.readdirSync(pathDist)

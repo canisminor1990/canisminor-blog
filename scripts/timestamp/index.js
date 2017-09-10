@@ -23,8 +23,8 @@ const pathSrc = './src'
 export default () => {
 	const files = fs.readdirSync(pathSrc)
 	return files.forEach(item => {
-		if (item.split('#').length < 2) {
-			const newName = `${addTimeHash()}#${item}`;
+		if (item.split('_').length < 2) {
+			const newName = `${addTimeHash()}_${item}`;
 			fs.renameSync(path.join(pathSrc, item), path.join(pathSrc, newName), err => console.error(err))
 			console.log("✔", item, "=>", newName)
 		}
