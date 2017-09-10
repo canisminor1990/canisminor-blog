@@ -6,22 +6,24 @@
 	"author": "canisminor1990 <i@canisminor.cc>",
 	"scripts": {
 		"gulp": "gulp",
-		"build": "gulp markd"
+		"build": "gulp build; gulp build:toc"
 	},
 	"engines": {
 		"install-node": "6.9.2"
 	},
 	"dependencies": {
-		"gulp": "^3.9.1",
+		"babel-core": "^6.26.0",
 		"babel-preset-es2015": "^6.24.1",
 		"babel-preset-react": "^6.24.1",
-		"babel-preset-stage-0": "^6.24.1"
+		"babel-preset-stage-0": "^6.24.1",
+		"del": "^3.0.0",
+		"gulp": "^3.9.1",
+		"run-sequence": "^2.1.0"
 	},
 	"devDependencies": {
-		"path": "^0.12.7",
 		"fs-extra": "^4.0.1",
-		"babel-core": "^6.26.0",
 		"gulp-marked-json": "^1.0.0",
-		"gulp-nunjucks-render": "^2.2.1"
+		"gulp-nunjucks-render": "^2.2.1",
+		"path": "^0.12.7"
 	}
 }
