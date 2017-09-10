@@ -1,5 +1,7 @@
 # CanisMinor Blog
 
+<img src="https://canisminor.cc/img/loader.gif" width="120" />
+
 Markdown 2 Json
 
 ### Usage
