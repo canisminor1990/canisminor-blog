@@ -2,7 +2,7 @@
 	"name": "canisminor-blog",
 	"version": "1.0.0",
 	"main": "gulpfile.babel.js",
-	"repository": "git@github.com:canisminor1990/canisminor-blog.git",
+	"repository": "git@git.coding.net:canisminor1990/canisminor-blog.git",
 	"author": "canisminor1990 <i@canisminor.cc>",
 	"scripts": {
 		"gulp": "gulp",
