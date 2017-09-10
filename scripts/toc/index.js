@@ -9,16 +9,18 @@ export default (cb) => {
 	const files = fs.readdirSync(pathDist)
 	let tocData = []
 	files.sort(sortNumber).forEach(item => {
-		if (item !== "toc.json") {
-			let data = JSON.parse(fs.readFileSync(path.join(pathDist, item)))
+		if (item !== "toc") {
+			const newName = item.split(".")[0];
+			fs.renameSync(path.join(pathDist, item), path.join(pathDist, newName))
+			let data = JSON.parse(fs.readFileSync(path.join(pathDist, newName)))
 			tocData.push({
-				filename: item,
+				filename: newName,
 				title: data.title,
 				tag: data.tag || "",
 				cover: data.cover || ""
 			})
 		}
 	})
-	fs.writeFileSync(path.join(pathDist, 'toc.json'), JSON.stringify(tocData))
+	fs.writeFileSync(path.join(pathDist, 'toc'), JSON.stringify(tocData))
 	cb();
 }

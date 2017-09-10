@@ -25,7 +25,7 @@ export default () => {
 	return files.forEach(item => {
 		if (item.split('_').length < 2) {
 			const newName = `${addTimeHash()}_${item}`;
-			fs.renameSync(path.join(pathSrc, item), path.join(pathSrc, newName), err => console.error(err))
+			fs.renameSync(path.join(pathSrc, item), path.join(pathSrc, newName))
 			console.log("✔", item, "=>", newName)
 		}
 	});
