@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
-import path from 'path';
 import _ from 'lodash';
+import path from 'path';
 
 const pathDist = './dist';
 
@@ -18,16 +18,18 @@ export default (cb) => {
 			const body = data.body.split('\n\n');
 			let cutRow = (body.length > row) ? row : body.length;
 			let desc   = [];
+			console.log(item, body.length);
 			for (let i = 0; i <= cutRow; i++) {
 				desc.push(body[i]);
 			}
 			let descStr = desc.join('\n\n');
-			if (descStr.match(/```/g).length % 2 !== 0) {
-				descStr         = _.compact(descStr.split('```'));
-				let rightiIndex = (_.last(descStr).replace(/ |\n/g, '') === '') ? 2 : 1;
-				descStr = _.dropRight(descStr, rightiIndex).join('```');
-			}
-
+			try {
+				if (descStr.match(/```/g).length % 2 !== 0) {
+					descStr         = _.compact(descStr.split('```'));
+					let rightiIndex = (_.last(descStr).replace(/ |\n/g, '') === '') ? 2 : 1;
+					descStr         = _.dropRight(descStr, rightiIndex).join('```');
+				}
+			} catch (e) {}
 			tocData.push({
 				             filename: newName,
 				             title   : data.title,
