@@ -5,7 +5,6 @@ import buildToc from "./scripts/toc";
 import buildFiles from "./scripts/build";
 import addHash from './scripts/timestamp'
 import img from './scripts/img'
-import qiniu from './scripts/qiniu'
 
 gulp.task('del', () => del.sync(["dist/**/*"]));
 

@@ -13,7 +13,7 @@ export default () => {
 		const parsed = frontMatter(data);
 		const json   = {...parsed.attributes};
 		json.filename = item.replace('.md', '')
-		json.tag=_.compact(json.tag.split(' '))
+		try{json.tag=_.compact(json.tag.split(' '))}catch (e){}
 		json.body    = parsed.body.replace(/^`````([\w\:]+)$/gm, '`````$1-').replace(/(\n){3,}/g,'\n\n')
 		json.body = json.body.replace(/(#(.*))\n/,(m,m1)=> {
 			json.title = m1.replace("#",'').replace(/^ /,'')
