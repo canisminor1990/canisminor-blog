@@ -33,7 +33,7 @@ export default (cb) => {
 			tocData.push({
 				             filename: newName,
 				             title   : data.title,
-				             tag     : data.tag || '',
+				             tag     : data.tag,
 				             body    : descStr,
 				             full    : body.length === row
 			             });
