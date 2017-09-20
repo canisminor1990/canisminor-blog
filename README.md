@@ -2,6 +2,8 @@
 
 <img src="https://canisminor.cc/img/loader.gif" width="120" />
 
+<https://canisminor.cc>
+
 Markdown 2 Json
 
 ### Usage
