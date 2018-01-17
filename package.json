@@ -1,28 +1,49 @@
 {
-	"name": "canisminor-blog",
-	"version": "1.0.0",
-	"main": "gulpfile.babel.js",
-	"repository": "git@git.coding.net:canisminor1990/canisminor-blog.git",
-	"author": "canisminor1990 <i@canisminor.cc>",
-	"scripts": {
-		"gulp": "gulp",
-		"build": "gulp build; gulp build:toc",
-		"build:img": "gulp build:img"
-	},
-	"devDependencies": {
-		"babel-core": "^6.26.0",
-		"babel-preset-env": "^1.6.0",
-		"babel-preset-stage-0": "^6.24.1",
-		"del": "^3.0.0",
-		"front-matter": "^2.2.0",
-		"fs-extra": "^4.0.1",
-		"gulp": "^3.9.1",
-		"gulp-cache": "^0.4.6",
-		"gulp-imagemin": "^3.3.0",
-		"gulp-nunjucks-render": "^2.2.1",
-		"imagemin-pngquant": "^5.0.1",
-		"lodash": "^4.17.4",
-		"path": "^0.12.7",
-		"run-sequence": "^2.1.0"
-	}
+  "name": "canisminor-blog",
+  "version": "1.0.0",
+  "main": "gulpfile.babel.js",
+  "repository": "git@git.coding.net:canisminor1990/canisminor-blog.git",
+  "author": "canisminor1990 <i@canisminor.cc>",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build; gulp build:toc",
+    "build:img": "gulp build:img",
+    "lint": "lint-staged"
+  },
+  "pre-commit": ["lint"],
+  "lint-staged": {
+    "README.md": [
+      "prettier --trailing-comma all --single-quote --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier --trailing-comma all --single-quote --write",
+      "git add"
+    ],
+    "src/*.md": [
+      "prettier --trailing-comma all --single-quote --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.10.2",
+    "run-sequence": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "del": "^3.0.0",
+    "front-matter": "^2.2.0",
+    "fs-extra": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "imagemin-pngquant": "^5.0.1",
+    "lint-staged": "^6.0.0",
+    "lodash": "^4.17.4",
+    "path": "^0.12.7"
+  }
 }
