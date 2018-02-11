@@ -8,17 +8,17 @@
 
 [![](https://img.shields.io/badge/canisminor.cc-online-brightgreen.svg)](https://canisminor.cc)
 
-## 🖤 Website
+## Website
 
 <https://canisminor.cc>
 
-## 🔧 Usage
+## Usage
 
 ```bash
 $ yarn build
 ```
 
-## 📺 Link
+## Link
 
 * **gulp-marked-json:** <https://github.com/minwe/gulp-marked-json>
 * **Nunjucks:** <http://mozilla.github.io/nunjucks/getting-started.html>
