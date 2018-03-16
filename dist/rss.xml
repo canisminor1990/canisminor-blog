@@ -1,10 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CanisMinor]]></title><description><![CDATA[来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed]]></description><link>https://canisminor.cc</link><image><url>https://canisminor.cc/favicons/favicon-32x32.png</url><title>CanisMinor</title><link>https://canisminor.cc</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 16 Mar 2018 06:26:30 GMT</lastBuildDate><atom:link href="https://canisminor.cc/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[CanisMinor 2018 版权所有]]></copyright><language><![CDATA[zh-cn]]></language><managingEditor><![CDATA[CanisMinor]]></managingEditor><webMaster><![CDATA[CanisMinor]]></webMaster><category><![CDATA[design]]></category><category><![CDATA[coding]]></category><category><![CDATA[ued]]></category><category><![CDATA[fe]]></category><category><![CDATA[ui/ux]]></category><item><title><![CDATA[使用node-rss生成feed订阅]]></title><description><![CDATA[<p><img src="http://qn.canisminor.cc/2018-03-16-rss.png" alt="full"></p>
-<p>刚用<code>node-rss</code>新增了博客rss订阅服务：<a href="https://canisminor.cc/rss.xml">🔖 订阅地址</a>  ，顺便总结一下node-rss的使用方式。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[CanisMinor]]></title><description><![CDATA[来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed]]></description><link>https://canisminor.cc</link><image><url>https://canisminor.cc/favicons/favicon-32x32.png</url><title>CanisMinor</title><link>https://canisminor.cc</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 16 Mar 2018 06:30:00 GMT</lastBuildDate><atom:link href="https://canisminor.cc/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[CanisMinor 2018 版权所有]]></copyright><language><![CDATA[zh-cn]]></language><managingEditor><![CDATA[CanisMinor]]></managingEditor><webMaster><![CDATA[CanisMinor]]></webMaster><category><![CDATA[design]]></category><category><![CDATA[coding]]></category><category><![CDATA[ued]]></category><category><![CDATA[fe]]></category><category><![CDATA[ui/ux]]></category><item><title><![CDATA[使用 node-rss 生成 feed 订阅]]></title><description><![CDATA[<p><img src="http://qn.canisminor.cc/2018-03-16-rss-1.png" alt="full"></p>
+<p>刚用<code>node-rss</code>新增了博客 rss 订阅服务：<a href="https://canisminor.cc/rss.xml">🔖 订阅地址</a> ，顺便总结一下 node-rss 的使用方式。</p>
 <h2 id="install">Install</h2>
 <pre><code class="lang-bash">$ yarn add rss --dev
 </code></pre>
 <h2 id="usage">Usage</h2>
-<p>引入rss包并创建一个feed对象：</p>
+<p>引入 rss 包并创建一个 feed 对象：</p>
+<pre><code class="lang-js">import RSS from &#39;rss&#39;;
+
+const feed = new RSS({
+    title         : &#39;CanisMinor&#39;,
+    description   : &#39;来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed&#39;,
+    site_url      : &#39;https://canisminor.cc&#39;,
+    feed_url      : &#39;https://canisminor.cc/rss.xml&#39;
+    image_url     : &#39;https://canisminor.cc/favicons/favicon-32x32.png&#39;,
+    managingEditor: &#39;CanisMinor&#39;,
+    webMaster     : &#39;CanisMinor&#39;,
+    copyright     : &#39;CanisMinor 2018 版权所有&#39;,
+    language      : &#39;zh-cn&#39;,
+    categories    : [&#39;design&#39;, &#39;coding&#39;, &#39;ued&#39;, &#39;fe&#39;, &#39;ui/ux&#39;]
+});
+</code></pre>
 ...]]></description><link>https://canisminor.cc/blog/20180316021652_rss?source=feed</link><guid isPermaLink="true">https://canisminor.cc/blog/20180316021652_rss?source=feed</guid><category><![CDATA[rss]]></category><category><![CDATA[feed]]></category><dc:creator><![CDATA[CanisMinor]]></dc:creator><pubDate>Thu, 15 Mar 2018 18:16:52 GMT</pubDate></item><item><title><![CDATA[Screeps 新局]]></title><description><![CDATA[<p><img src="http://qn.canisminor.cc/2018-03-14-screeps.png" alt="full"></p>
 <p><strong>Room:</strong> <a href="https://screeps.com/a/#!/room/shard2/W46N18">shard2 W46N18</a></p>
 <p>自从去年孤军奋战两个月被侵略型 Alliance 打爆后就歇了 🤒，最近看了官方的更新，新加了一些好玩特性，把图形引擎从 SVG 换成了 WebGL，并引入了 shard 概念，新区每 tick 稳定在 3s 左右(基本比老区快了将近 1 倍)，就决定回坑开新局，并测试下 js 和逻辑经过一年的精进情况，欢迎做邻居 2333</p>
