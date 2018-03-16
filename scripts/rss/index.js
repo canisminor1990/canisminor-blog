@@ -20,7 +20,7 @@ marked.setOptions({
 
 const feed = new RSS(
 	{
-		title         : 'CanisMinor RSS Feed',
+		title         : 'CanisMinor',
 		description   : '来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed',
 		site_url      : 'https://' + SITE,
 		feed_url      : 'https://' + join(SITE, 'feed'),
