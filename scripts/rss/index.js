@@ -24,7 +24,7 @@ const feed = new RSS(
 		description   : '来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed',
 		site_url      : 'https://' + SITE,
 		feed_url      : 'https://' + join(SITE, 'feed'),
-		image_url     : 'https://' + join(SITE, 'img/share-cover.png'),
+		image_url     : 'https://' + join(SITE, 'favicons/favicon-32x32.png'),
 		managingEditor: 'CanisMinor',
 		webMaster     : 'CanisMinor',
 		copyright     : 'CanisMinor 2018 版权所有',
