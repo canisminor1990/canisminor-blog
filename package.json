@@ -29,6 +29,10 @@
     "src/*.md": [
       "prettier --trailing-comma all --single-quote --write",
       "git add"
+    ],
+    "dist/res.xml": [
+      "prettier --trailing-comma all --single-quote --write",
+      "git add"
     ]
   },
   "dependencies": {
@@ -48,6 +52,7 @@
     "gulp-cache": "^0.4.6",
     "gulp-imagemin": "^3.3.0",
     "gulp-nunjucks-render": "^2.2.1",
+    "html-minifier": "^3.5.11",
     "imagemin-pngquant": "^5.0.1",
     "lint-staged": "^6.0.0",
     "lodash": "^4.17.4",

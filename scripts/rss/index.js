@@ -4,6 +4,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import marked from 'marked';
 import fs from 'fs-extra';
+import {minify} from 'html-minifier'
 
 const SITE     = 'canisminor.cc';
 const pathDist = './dist';
@@ -32,6 +33,8 @@ const feed = new RSS(
 		categories    : ['design', 'coding', 'ued', 'fe', 'ui/ux']
 	});
 
+const miniConf = {removeComments: true,collapseWhitespace: true}
+
 export default cb => {
 
 	const Toc = JSON.parse(fs.readFileSync(join(pathDist, 'toc')));
@@ -40,7 +43,7 @@ export default cb => {
 		feed.item(
 			{
 				title      : item.title,
-				description: marked(item.body) + '...',
+				description: minify(marked(item.body),miniConf) + '...',
 				url        : `https://${join(SITE, 'blog', item.filename)}?source=feed`,
 				author     : 'CanisMinor',
 				categories : item.tag,
