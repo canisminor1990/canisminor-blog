@@ -29,6 +29,7 @@ const feed = new RSS(
 		webMaster     : 'CanisMinor',
 		copyright     : 'CanisMinor 2018 版权所有',
 		language      : 'zh-cn',
+		categories    : ['design', 'coding', 'ued', 'fe', 'ui/ux']
 	});
 
 export default cb => {
