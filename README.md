@@ -20,5 +20,5 @@ $ yarn build
 
 ## Link
 
-* **gulp-marked-json:** <https://github.com/minwe/gulp-marked-json>
+* **node-sass:** <https://github.com/dylang/node-rss>
 * **Nunjucks:** <http://mozilla.github.io/nunjucks/getting-started.html>

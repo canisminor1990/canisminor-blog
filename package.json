@@ -1,13 +1,16 @@
 {
   "name": "canisminor-blog",
   "version": "1.0.0",
-  "main": "gulpfile.babel.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:canisminor1990/canisminor-blog.git",
     "coding": "git@git.coding.net:canisminor1990/canisminor-blog.git"
   },
-  "author": "canisminor1990 <i@canisminor.cc>",
+  "author": {
+    "name": "CanisMinor",
+    "email": "i@canisminor.cc",
+    "url": "https://canisminor.cc/"
+  },
   "scripts": {
     "gulp": "gulp",
     "build": "gulp build && gulp build:toc && gulp build:rss",
@@ -29,13 +32,10 @@
     "src/*.md": [
       "prettier --trailing-comma all --single-quote --write",
       "git add"
-    ],
-    "dist/res.xml": [
-      "prettier --trailing-comma all --single-quote --write",
-      "git add"
     ]
   },
   "dependencies": {
+    "gulp": "^3.9.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.10.2",
     "run-sequence": "^2.1.0"
@@ -48,7 +48,6 @@
     "del": "^3.0.0",
     "front-matter": "^2.2.0",
     "fs-extra": "^4.0.1",
-    "gulp": "^3.9.1",
     "gulp-cache": "^0.4.6",
     "gulp-imagemin": "^3.3.0",
     "gulp-nunjucks-render": "^2.2.1",
