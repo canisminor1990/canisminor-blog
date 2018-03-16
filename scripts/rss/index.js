@@ -29,7 +29,6 @@ const feed = new RSS(
 		webMaster     : 'CanisMinor',
 		copyright     : 'CanisMinor 2018 版权所有',
 		language      : 'zh-Hans',
-		ttl           : '60'
 	});
 
 export default cb => {
