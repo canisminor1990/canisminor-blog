@@ -40,7 +40,7 @@ export default cb => {
 		feed.item(
 			{
 				title      : item.title,
-				description: marked(item.body),
+				description: marked(item.body) + '...',
 				url        : `https://${join(SITE, 'blog', item.filename)}?source=feed`,
 				author     : 'CanisMinor',
 				categories : item.tag,
