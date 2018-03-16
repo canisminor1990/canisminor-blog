@@ -45,7 +45,7 @@ export default cb => {
 				url        : 'https://' + join(SITE, 'blog', item.filename),
 				author     : 'CanisMinor',
 				categories : item.tag,
-				date       : moment(item.filename.split('_')[1], 'YYYYMMDDhhmmss').format('MMMM Do YYYY, h:mm:ss a')
+				date       : moment(item.filename.split('_')[0], 'YYYYMMDDhhmmss').format('MMMM Do YYYY, h:mm:ss a')
 			});
 	});
 
