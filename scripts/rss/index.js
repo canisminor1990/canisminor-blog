@@ -23,12 +23,12 @@ const feed = new RSS(
 		title         : 'CanisMinor RSS Feed',
 		description   : '来自 CanisMinor 博客的订阅信息 - CanisMinor RSS Feed',
 		site_url      : 'https://' + SITE,
-		feed_url      : 'https://' + join(SITE, 'rss'),
+		feed_url      : 'https://' + join(SITE, 'feed'),
 		image_url     : 'https://' + join(SITE, 'img/share-cover.png'),
 		managingEditor: 'CanisMinor',
 		webMaster     : 'CanisMinor',
 		copyright     : 'CanisMinor 2018 版权所有',
-		language      : 'zh-Hans',
+		language      : 'zh-cn',
 	});
 
 export default cb => {
@@ -40,8 +40,7 @@ export default cb => {
 			{
 				title      : item.title,
 				description: marked(item.body),
-				guid       : 'https://' + join(SITE, 'blog', item.filename),
-				url        : 'https://' + join(SITE, 'blog', item.filename),
+				url        : `https://${join(SITE, 'blog', item.filename)}?source=feed`,
 				author     : 'CanisMinor',
 				categories : item.tag,
 				date       : moment(item.filename.split(/_/g)[0], 'YYYYMMDDhhmmss').format()
